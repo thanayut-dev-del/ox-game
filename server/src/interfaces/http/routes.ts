@@ -1,0 +1,12 @@
+import { Router } from 'express';
+import { authController } from './controllers/authController.js';
+import { meController } from './controllers/meController.js';
+import { gameController } from './controllers/gameController.js';
+import { scoreController } from './controllers/scoreController.js';
+import { adminController } from './controllers/adminController.js';
+export const routes = Router();
+routes.use('/auth', authController);
+routes.use('/api/me', meController);
+routes.use('/api/game', gameController);
+routes.use('/api/score', scoreController);
+routes.use('/api/admin', adminController);
