@@ -55,6 +55,7 @@ ox-game-all-in-one/
 cp server/.env.example server/.env
 ```
    แล้วปรับค่าใน server/.env (CLIENT_URL, DATABASE_URL, SESSION_SECRET, GOOGLE_*, ADMIN_EMAILS)
+   
 2. รันด้วย Docker:
 ```bash
 docker compose up -d --build
