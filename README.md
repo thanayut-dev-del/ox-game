@@ -51,28 +51,57 @@ ox-game-all-in-one/
 
 ## ⚙️ Setup & Run (One-command)
 1. คัดลอก env:
-   cp server/.env.example server/.env
+```bash
+cp server/.env.example server/.env
+```
    แล้วปรับค่าใน server/.env (CLIENT_URL, DATABASE_URL, SESSION_SECRET, GOOGLE_*, ADMIN_EMAILS)
 2. รันด้วย Docker:
-   docker compose up -d --build
+```bash
+docker compose up -d --build
+```
 
 ## URLs
-- API: http://localhost:4000
-- Web: http://localhost:5173
-- Adminer (DB UI): http://localhost:8080
-- MySQL: localhost:3306 (oxuser / oxpass)
+| 🧠 Server (API) | http://localhost:4000 |
+| 🎮 Web App | http://localhost:5173 |
+| 🗄️ Adminer (DB UI) | http://localhost:8080 |
+| 🐬 MySQL | localhost:3306 (user: `oxuser`, pass: `oxpass`) |
+
+## 🧠 Architecture Summary
+
+### Backend (Layered Architecture)
+```
+Config → Domain → Infra → Application → Interfaces
+```
+
+### Frontend (Feature-Sliced Design)
+```
+app → processes → pages → widgets → features → entities → shared
+```
 
 ### Local run (ไม่ใช้ Docker)
-- DB: docker compose up mysql -d
-- Backend:
-  cd server && npm i && npm run dev
-- Frontend:
-  cd web && npm i && npm run dev
+```bash
+# Database
+docker compose up mysql -d
+
+# Backend
+cd server
+npm i
+npm run dev
+
+# Frontend
+cd web
+npm i
+npm run dev
+```
 
 ### Format Code
-- ฟอร์แมตโค้ด:
-  cd server && npm run format
-  cd web && npm run format
+```bash
+# Server
+cd server && npm run format
+
+# Web
+cd web && npm run format
+```
 
 ## 💡 Tip:  
 - ให้ตั้ง ADMIN_EMAILS ใน .env ให้ตรงกับอีเมลที่ล็อกอินเพื่อเข้าฟีเจอร์ admin
