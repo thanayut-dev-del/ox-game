@@ -1,0 +1,11 @@
+{
+  "name": "ox-game-all-in-one",
+  "private": true,
+  "scripts": {
+    "setup": "cd server && npm install --save-dev prettier && cd ../web && npm install --save-dev prettier && cd ..",
+    "format": "npx prettier --write \"web/**/*.{ts,tsx,js,jsx,json,css,html,md}\" \"server/**/*.{ts,tsx,js,jsx,json,css,html,md,sql}\"",
+    "format:web": "npx prettier --write \"web/**/*.{ts,tsx,js,jsx,json,css,html,md}\"",
+    "format:server": "npx prettier --write \"server/**/*.{ts,tsx,js,jsx,json,css,html,md,sql}\"",
+    "format:check": "npx prettier --check \"web/**/*.{ts,tsx,js,jsx,json,css,html,md}\" \"server/**/*.{ts,tsx,js,jsx,json,css,html,md,sql}\""
+  }
+}
