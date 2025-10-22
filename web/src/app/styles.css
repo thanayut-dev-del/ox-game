@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+.container {
+  max-width: 760px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+.header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.me {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+}
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 8px;
+  margin: 24px auto;
+}
+button {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+}
+h3,
+h4 {
+  margin: 16px 0 8px;
+}
+.footer-space {
+  height: 40px;
+}
